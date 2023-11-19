@@ -26,10 +26,10 @@
 </div>
 
 <div class="grid">
-	<TextBox type="search" size="sm" bind:value {onClick} />
-	<TextBox type="search" size="md" disabled bind:value />
-	<TextBox type="password" size="lg" bind:value />
-	<TextBox size="xl" bind:value disabled/>
+	<TextBox type="password" size="sm" bind:value />
+	<TextBox type="search" size="md" bind:value {onClick}></TextBox>
+	<TextBox type="search" size="lg" disabled bind:value />
+	<TextBox size="xl" bind:value>{checked}</TextBox>
 </div>
 
 <style>
@@ -38,7 +38,7 @@
 		gap: 0.5rem;
 		margin-right: 1rem;
 		justify-items: end;
-    width: 5rem;
+		width: 20vw;
 	}
 	:global(label) {
 		text-transform: capitalize;
