@@ -1,8 +1,9 @@
 <script lang="ts">
-	import type { SizeMapping } from "./type.d.ts";
+	import type { SizeMapping } from './type.d.ts';
 
 	export let checked = false;
 	export let size: 'sm' | 'md' | 'lg' | 'xl' = 'md';
+	export let disabled = false;
 
 	let sizeMapping: SizeMapping = {
 		sm: '0.9rem',
@@ -12,8 +13,8 @@
 	};
 </script>
 
-<label style="--switch-size:{sizeMapping[size]}">
-	<input type="checkbox" bind:checked />
+<label style="--switch-size:{sizeMapping[size]}" class:disabled>
+	<input type="checkbox" bind:checked {disabled} />
 	<span class="switch">
 		<span class="circle" />
 	</span>
@@ -29,6 +30,10 @@
 		align-items: center;
 		font-weight: bold;
 		gap: 5px;
+	}
+	label.disabled {
+		filter: brightness(0.5);
+		cursor: not-allowed;
 	}
 	.switch {
 		display: inline-block;
@@ -52,6 +57,10 @@
 		background-color: var(--border);
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 		transition: transform 0.3s ease;
+	}
+
+	input:disabled + .switch {
+		cursor: not-allowed;
 	}
 
 	input[type='checkbox'] {
