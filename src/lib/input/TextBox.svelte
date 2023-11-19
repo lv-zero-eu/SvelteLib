@@ -1,4 +1,6 @@
 <script lang="ts">
+	import type { SizeMapping } from "./type.d.ts";
+
 	export let disabled = false;
 	export let type: 'text' | 'search' | 'password' = 'text';
 	export let size: 'sm' | 'md' | 'lg' | 'xl' = 'md';
@@ -6,7 +8,7 @@
 	export let id = Math.random().toString(36).substring(2, 15);
 	export let onClick = () => {};
 
-	let sizeMapping: { [key: size]: string } = {
+	let sizeMapping: SizeMapping = {
 		sm: '1.2rem',
 		md: '1.5rem',
 		lg: '1.7rem',

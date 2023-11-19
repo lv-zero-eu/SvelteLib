@@ -1,8 +1,10 @@
 <script lang="ts">
-	export let checked;
+	import type { SizeMapping } from "./type.d.ts";
+
+	export let checked = false;
 	export let size: 'sm' | 'md' | 'lg' | 'xl' = 'md';
 
-	let sizeMapping: { [key: size]: string } = {
+	let sizeMapping: SizeMapping = {
 		sm: '0.9rem',
 		md: '1.1rem',
 		lg: '1.3rem',
@@ -15,7 +17,7 @@
 	<span class="switch">
 		<span class="circle" />
 	</span>
-  <slot/>
+	<slot />
 </label>
 
 <style>
@@ -23,10 +25,10 @@
 		-webkit-user-select: none; /* Safari */
 		-ms-user-select: none; /* IE 10 and IE 11 */
 		user-select: none; /* Standard syntax */
-    display: flex;
+		display: flex;
 		align-items: center;
-    font-weight: bold;
-    gap: 5px;
+		font-weight: bold;
+		gap: 5px;
 	}
 	.switch {
 		display: inline-block;
