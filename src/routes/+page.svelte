@@ -14,14 +14,14 @@
 <div class="grid">
 	<ToggleSwitch bind:checked size="sm">{checked}</ToggleSwitch>
 	<ToggleSwitch bind:checked size="md">{checked}</ToggleSwitch>
-	<ToggleSwitch bind:checked size="lg">{checked}</ToggleSwitch>
+	<ToggleSwitch bind:checked size="lg" disabled>{checked}</ToggleSwitch>
 	<ToggleSwitch bind:checked size="xl">{checked}</ToggleSwitch>
 </div>
 
 <div class="grid">
 	<RadioButton group="test" size="sm" checked>1</RadioButton>
 	<RadioButton group="test" size="md">2</RadioButton>
-	<RadioButton group="test" size="lg">3</RadioButton>
+	<RadioButton group="test" size="lg" disabled>3</RadioButton>
 	<RadioButton group="test" size="xl">4</RadioButton>
 </div>
 
