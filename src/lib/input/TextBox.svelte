@@ -37,8 +37,8 @@
 	};
 </script>
 
-<div class="top">
-	<div class:disabled style="--input-size:{sizeMapping[size]}">
+<div class="top" style="--input-size:{sizeMapping[size]}">
+	<div class:disabled>
 		<input {type} {id} {value} {disabled} on:input={handleInput} />
 		{#if realType === 'search' || realType === 'password'}
 			<button {disabled} on:click={action}>
@@ -56,12 +56,15 @@
 		display: flex;
 		align-items: center;
 		gap: 6px;
+		width: 100%;
+		font-size: calc(var(--input-size) / 2);
 	}
 	.top > div {
 		display: flex;
 		align-items: center;
 		border: 1px solid var(--border);
 		border-radius: calc(var(--input-size) / 4);
+		flex: 1;
 	}
 
 	input {
@@ -71,6 +74,7 @@
 		background-color: transparent;
 		color: inherit;
 		font-size: calc(var(--input-size) / 2);
+		width: 100%;
 	}
 	input:focus {
 		outline: none;
