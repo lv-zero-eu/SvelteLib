@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let size: 'sm' | 'md' | 'lg' | 'xl' = 'md';
-	export let value;
-	export let group;
+	export let value = "";
+	export let group = "";
 	export let checked = false;
 
 	let sizeMapping: { [key: string]: string } = {

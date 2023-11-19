@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let disabled;
+	export let disabled = false;
 	export let type: 'text' | 'search' | 'password' = 'text';
 	export let size: 'sm' | 'md' | 'lg' | 'xl' = 'md';
 	export let value = '';
