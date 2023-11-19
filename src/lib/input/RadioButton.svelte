@@ -5,6 +5,7 @@
 	export let value = '';
 	export let group = '';
 	export let checked = false;
+	export let disabled = false;
 
 	let sizeMapping: SizeMapping = {
 		sm: '0.2rem',
@@ -14,8 +15,8 @@
 	};
 </script>
 
-<label style="--radio-size:{sizeMapping[size]}">
-	<input type="radio" bind:value name={group} {checked} />
+<label style="--radio-size:{sizeMapping[size]}" class:disabled>
+	<input type="radio" bind:value name={group} {checked} {disabled} />
 	<span />
 	<slot />
 </label>
@@ -37,13 +38,18 @@
 		margin-right: 6px;
 	}
 
+	label.disabled {
+		filter: brightness(0.5);
+		cursor: not-allowed;
+	}
+
 	label {
 		display: inline-flex;
 		align-items: center;
 		cursor: pointer;
 	}
 
-	label:hover span {
+	label:not(.disabled):hover span {
 		background-color: white;
 	}
 
