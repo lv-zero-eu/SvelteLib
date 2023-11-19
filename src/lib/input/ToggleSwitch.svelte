@@ -3,18 +3,19 @@
 	export let size: 'sm' | 'md' | 'lg' | 'xl' = 'md';
 
 	let sizeMapping: { [key: size]: string } = {
-		sm: '1rem',
-		md: '1.5rem',
-		lg: '2rem',
-		xl: '2.5rem'
+		sm: '0.9rem',
+		md: '1.1rem',
+		lg: '1.3rem',
+		xl: '1.5rem'
 	};
 </script>
 
-<label style="--switch-width:{sizeMapping[size]}">
+<label style="--switch-size:{sizeMapping[size]}">
 	<input type="checkbox" bind:checked />
 	<span class="switch">
 		<span class="circle" />
 	</span>
+  <slot/>
 </label>
 
 <style>
@@ -22,13 +23,17 @@
 		-webkit-user-select: none; /* Safari */
 		-ms-user-select: none; /* IE 10 and IE 11 */
 		user-select: none; /* Standard syntax */
+    display: flex;
+		align-items: center;
+    font-weight: bold;
+    gap: 5px;
 	}
 	.switch {
 		display: inline-block;
-		height: var(--switch-width);
+		height: var(--switch-size);
 		aspect-ratio: 4/2;
 		background-color: transparent;
-		border-radius: var(--switch-width);
+		border-radius: var(--switch-size);
 		position: relative;
 		cursor: pointer;
 		border: 1px solid var(--border);

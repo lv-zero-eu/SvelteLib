@@ -11,6 +11,7 @@
 		--txt-secondary: rgba(255, 255, 255, 0.78);
 		--txt-accent: rgb(153, 255, 153);
 		--txt-accent2: rgba(153, 255, 153, 0.2);
+		font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	}
 
 	:global(body) {
