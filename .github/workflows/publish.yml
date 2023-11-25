@@ -1,7 +1,7 @@
 name: Publish package to GitHub Packages
 on:
   push:
-    branches: ['latest', 'release/*']
+    branches: ['master', 'release/*']
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,3 +30,4 @@ jobs:
       - run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
