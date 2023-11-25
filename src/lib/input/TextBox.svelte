@@ -1,9 +1,10 @@
 <script lang="ts">
-	import type { SizeMapping } from './type.d.ts';
+	import type { SizeMapping, SizeAvailable } from './type.d.ts';
+	import type { InputEventInit } from 'svelte';
 
 	export let disabled = false;
 	export let type: 'text' | 'search' | 'password' = 'text';
-	export let size: 'sm' | 'md' | 'lg' | 'xl' = 'md';
+	export let size: SizeAvailable = 'md';
 	export let value = '';
 	export let id = Math.random().toString(36).substring(2, 15);
 	export let onClick = () => {};
@@ -42,7 +43,9 @@
 		<input {type} {id} {value} {disabled} on:input={handleInput} />
 		{#if realType === 'search' || realType === 'password'}
 			<button {disabled} on:click={action}>
+				<!-- eslint-disable svelte/no-at-html-tags -->
 				{@html svgs[realType]}
+				<!-- eslint-enable -->
 			</button>
 		{/if}
 	</div>

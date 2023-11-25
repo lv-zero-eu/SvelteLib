@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { SizeMapping } from './type.d.ts';
+	import type { SizeMapping, SizeAvailable } from './type.d.ts';
 
-	export let size: 'sm' | 'md' | 'lg' | 'xl' = 'md';
+	export let size: SizeAvailable = 'md';
 	export let value = '';
 	export let group = '';
 	export let checked = false;
