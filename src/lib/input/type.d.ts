@@ -5,9 +5,4 @@ export interface SizeMapping extends Record<string, string> {
 	xl: string;
 }
 
-export enum SizeAvailable {
-	sm = 'sm',
-	md = 'md',
-	lg = 'lg',
-	xl = 'xl'
-}
+export type SizeAvailable = 'sm' | 'md' | 'lg' | 'xl';

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { SizeMapping, SizeAvailable } from './type.d.ts';
-	import type { InputEventInit } from 'svelte';
 
 	export let disabled = false;
 	export let type: 'text' | 'search' | 'password' = 'text';
@@ -16,7 +15,8 @@
 		xl: '1.85rem'
 	};
 
-	const handleInput = (e: InputEventInit) => {
+	// eslint-disable-next-line no-undef
+	const handleInput = (e: InputEvent) => {
 		value = e.data ? value + e.data : '';
 	};
 
