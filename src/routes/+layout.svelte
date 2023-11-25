@@ -1,10 +1,10 @@
 <script>
-	import WrapperTheme from '$lib/ThemeWrapper.svelte';
+	import { ThemeWrapper } from '$lib/';
 </script>
 
-<WrapperTheme>
+<ThemeWrapper>
 	<slot />
-</WrapperTheme>
+</ThemeWrapper>
 
 <style>
 	:global(body) {
