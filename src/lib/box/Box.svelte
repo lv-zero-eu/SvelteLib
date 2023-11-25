@@ -19,6 +19,7 @@
 		border-radius: var(--border-radius);
 		background-color: transparent;
 		width: fit-content;
+		overflow: hidden;
 	}
 	.header:has(> *) {
 		border-bottom: 1px solid var(--border);
