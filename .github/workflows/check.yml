@@ -1,11 +1,10 @@
-name: Format and lint
+name: esLint
 
 on:
   pull_request:
     branches: ['master', 'release/*']
 
 jobs:
-
   lint:
     runs-on: ubuntu-latest
     steps:
