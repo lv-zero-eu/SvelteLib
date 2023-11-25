@@ -1,7 +1,5 @@
 <script>
-	import ToggleSwitch from '$lib/input/ToggleSwitch.svelte';
-	import RadioButton from '$lib/input/RadioButton.svelte';
-	import TextBox from '$lib/input/TextBox.svelte';
+	import { TextBox, RadioButton, ToggleSwitch } from '$lib/index.ts';
 	import Box from '$lib/box/Box.svelte';
 	let checked = false;
 
