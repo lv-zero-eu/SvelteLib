@@ -1,5 +1,5 @@
 <script>
-	import {ThemeWrapper} from '$lib/';
+	import { ThemeWrapper } from '$lib/';
 </script>
 
 <ThemeWrapper>
