@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { SizeMapping } from "./type.d.ts";
+	import type { SizeMapping } from './type.d.ts';
 
 	export let disabled = false;
 	export let type: 'text' | 'search' | 'password' = 'text';
@@ -16,7 +16,7 @@
 	};
 
 	const handleInput = (e: InputEventInit) => {
-		value = e.data ? value+e.data : "";
+		value = e.data ? value + e.data : '';
 	};
 
 	const svgs = {
@@ -28,7 +28,7 @@
 
 	let realType = type.toString();
 	const action = () => {
-		onClick()
+		onClick();
 		if (type === 'password') {
 			type = 'text';
 		} else if (realType === 'password') {
