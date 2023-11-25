@@ -2,7 +2,7 @@ name: esLint
 
 on:
   pull_request:
-    branches: ['master', 'release/*']
+    branches: ['master', 'latest', 'release/*']
 
 jobs:
   lint:
