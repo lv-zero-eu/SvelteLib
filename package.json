@@ -1,5 +1,9 @@
 {
-	"name": "sveltelib",
+	"name": "@lv00/sveltelib",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lv-zero-eu/SvelteLib.git"
+	},
 	"version": "0.1.0",
 	"scripts": {
 		"dev": "vite dev",
@@ -48,5 +52,11 @@
 	},
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
-	"type": "module"
+	"type": "module",
+	"keywords": [
+		"Svelte",
+		"Styling"
+	],
+	"author": "Benoit-Welsch",
+	"license": "ISC"
 }
