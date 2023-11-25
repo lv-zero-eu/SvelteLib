@@ -31,7 +31,7 @@
 		onClick()
 		if (type === 'password') {
 			type = 'text';
-		} else if (realType === 'password' && realType != type) {
+		} else if (realType === 'password') {
 			type = realType;
 		}
 	};
