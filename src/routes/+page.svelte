@@ -40,9 +40,8 @@
 	.grid {
 		display: grid;
 		gap: 0.5rem;
-		justify-items: end;
 		padding: 0.5rem 0;
-		width: 40rem;
+		width: 30rem;
 	}
 	:global(label) {
 		text-transform: capitalize;
