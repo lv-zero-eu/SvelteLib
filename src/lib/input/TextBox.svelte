@@ -15,8 +15,8 @@
 		xl: '1.85rem'
 	};
 
-	const handleInput = (e) => {
-		value = type.match(/^(number|range)$/) ? +e.target.value : e.target.value;
+	const handleInput = (e: InputEventInit) => {
+		value = e.data ? value+e.data : "";
 	};
 
 	const svgs = {
