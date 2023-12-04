@@ -32,7 +32,7 @@
 		gap: 5px;
 	}
 	label.disabled {
-		filter: brightness(0.5);
+		opacity: 0.5;
 		cursor: not-allowed;
 	}
 	.switch {
@@ -68,7 +68,7 @@
 	}
 
 	input[type='checkbox']:checked + .switch {
-		background-color: white;
+		background-color: var(--active);
 		border: 1px solid var(--bg);
 	}
 

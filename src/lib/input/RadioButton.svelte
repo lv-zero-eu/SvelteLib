@@ -39,7 +39,7 @@
 	}
 
 	label.disabled {
-		filter: brightness(0.5);
+		opacity: 0.5;
 		cursor: not-allowed;
 	}
 
@@ -50,10 +50,10 @@
 	}
 
 	label:not(.disabled):hover span {
-		background-color: white;
+		background-color: var(--active);
 	}
 
 	label input:checked + span {
-		background-color: white;
+		background-color: var(--active);
 	}
 </style>

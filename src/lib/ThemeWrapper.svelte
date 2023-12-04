@@ -1,4 +1,6 @@
-<slot />
+<div>
+	<slot />
+</div>
 
 <style>
 	:root {
@@ -8,6 +10,11 @@
 		--border-radius: 0.3rem;
 		--txt: white;
 
+		--active: white;
+
+		--disable-radiant-1: rgba(255, 255, 255, 0);
+		--disable-radiant-2: rgba(255, 255, 255, 0.2);
+
 		--color-accent-emphasis: #1f6feb;
 		--color-accent-fg: #58a6ff;
 		--color-accent-muted: rgba(56, 139, 253, 0.4);
@@ -15,5 +22,25 @@
 		--color-action-list-item-danger-active-bg: --txt-secondary: rgba(255, 255, 255, 0.78);
 
 		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+
+	@media (prefers-color-scheme: light) {
+		:root {
+			--bg: white;
+			--bg-accent: rgba(100, 100, 100, 0.1);
+			--border: rgba(100, 100, 100, 1);
+			--txt: black;
+
+			--active: #1f6feb;
+
+			--disable-radiant-1: rgba(0, 0, 0, 0);
+			--disable-radiant-2: rgba(0, 0, 0, 0.1);
+
+			--color-accent-emphasis: #1f6feb;
+			--color-accent-fg: #58a6ff;
+			--color-accent-muted: rgba(56, 139, 253, 0.4);
+			--color-accent-subtle: rgba(56, 139, 253, 0.1);
+			--color-action-list-item-danger-active-bg: --txt-secondary: rgba(255, 255, 255, 0.78);
+		}
 	}
 </style>
