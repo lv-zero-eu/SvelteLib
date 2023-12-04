@@ -1,5 +1,6 @@
 <script>
-	import { TextBox, RadioButton, ToggleSwitch } from '$lib/index.ts';
+	// @ts-expect-error idk
+	import { TextBox, RadioButton, ToggleSwitch } from '$lib/';
 	import Box from '$lib/box/Box.svelte';
 	let checked = false;
 
