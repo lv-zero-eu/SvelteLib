@@ -8,10 +8,10 @@
 	export let disabled = false;
 
 	let sizeMapping: SizeMapping = {
-		sm: '0.2rem',
-		md: '0.4rem',
-		lg: '0.6rem',
-		xl: '0.8rem'
+		sm: '0.25rem',
+		md: '0.35rem',
+		lg: '0.45rem',
+		xl: '0.55rem'
 	};
 </script>
 
@@ -33,9 +33,9 @@
 		width: var(--radio-size);
 		aspect-ratio: 1/1;
 		border-radius: 50%;
-		border: max(calc(var(--radio-size) / 3), 3px) solid var(--border);
+		border: max(calc(var(--radio-size) * 0.75), 1px) solid var(--border);
 		background-color: var(--bg);
-		margin-right: 6px;
+		margin-right: 5px;
 	}
 
 	label.disabled {
@@ -50,10 +50,10 @@
 	}
 
 	label:not(.disabled):hover span {
-		background-color: var(--active);
+		border-color: var(--active);
 	}
 
 	label input:checked + span {
-		background-color: var(--active);
+		border-color: var(--active);
 	}
 </style>
