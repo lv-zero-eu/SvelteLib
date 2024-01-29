@@ -8,4 +8,3 @@ export { default as ToggleSwitch } from './input/ToggleSwitch.svelte';
 export { default as Button } from './input/Button.svelte';
 
 export { default as ThemeWrapper } from './ThemeWrapper.svelte';
-

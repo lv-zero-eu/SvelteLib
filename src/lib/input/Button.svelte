@@ -1,7 +1,6 @@
 <script lang="ts">
 	export let disabled = false;
 	export let onClick = () => {};
-
 </script>
 
 <button {disabled} on:click={onClick}>

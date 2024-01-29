@@ -14,7 +14,7 @@
 <Box>
 	<div class="header" slot="header">Input</div>
 	<div class="grid">
-		<ToggleSwitch bind:checked size="sm" >{checked}</ToggleSwitch>
+		<ToggleSwitch bind:checked size="sm">{checked}</ToggleSwitch>
 		<ToggleSwitch bind:checked size="md">{checked}</ToggleSwitch>
 		<ToggleSwitch bind:checked size="lg" disabled>{checked}</ToggleSwitch>
 		<ToggleSwitch bind:checked size="xl">{checked}</ToggleSwitch>
@@ -35,9 +35,8 @@
 	</div>
 
 	<div class="grid">
-		<Button onClick={onClick}>Click me</Button>
+		<Button {onClick}>Click me</Button>
 		<Button disabled>Don't Click me</Button>
-
 	</div>
 </Box>
 
