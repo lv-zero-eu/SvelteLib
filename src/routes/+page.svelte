@@ -1,6 +1,6 @@
 <script>
 	// @ts-expect-error idk
-	import { TextBox, RadioButton, ToggleSwitch } from '$lib/';
+	import { TextBox, RadioButton, ToggleSwitch, Button } from '$lib/';
 	import Box from '$lib/box/Box.svelte';
 	let checked = false;
 
@@ -32,6 +32,11 @@
 		<TextBox type="search" size="md" bind:value {onClick}></TextBox>
 		<TextBox type="search" size="lg" disabled bind:value />
 		<TextBox size="xl" bind:value>{checked}</TextBox>
+	</div>
+
+	<div class="grid">
+		<Button {onClick}>Click me</Button>
+		<Button disabled>Don't Click me</Button>
 	</div>
 </Box>
 
