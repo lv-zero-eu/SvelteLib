@@ -1,4 +1,5 @@
 <script>
+	// @ts-expect-error idk
 	import { ThemeWrapper } from '$lib/';
 </script>
 

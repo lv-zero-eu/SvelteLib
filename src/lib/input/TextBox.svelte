@@ -16,8 +16,8 @@
 	};
 
 	// eslint-disable-next-line no-undef
-	const handleInput = (e: InputEvent) => {
-		value = e.data ? value + e.data : '';
+	const handleInput = (e: Event) => {
+		value = (e as InputEvent).data ? value + (e as InputEvent).data : '';
 	};
 
 	const svgs = {
@@ -65,7 +65,7 @@
 	.top > div {
 		display: flex;
 		align-items: center;
-		border: 1px solid var(--border);
+		border: 2px solid var(--border);
 		border-radius: calc(var(--input-size) / 4);
 		flex: 1;
 	}
@@ -85,21 +85,21 @@
 
 	.top > div:not(.disabled):hover,
 	.top > div:focus-within {
-		border: 1px solid white;
+		border: 2px solid var(--active);
 	}
 	.disabled {
 		background: repeating-linear-gradient(
 			-45deg,
-			rgba(255, 255, 255, 0),
-			rgba(255, 255, 255, 0) 2px,
-			rgba(255, 255, 255, 0.15) 2px,
-			rgba(255, 255, 255, 0.15) 4px
+			var(--disable-radiant-1),
+			var(--disable-radiant-1) 3px,
+			var(--disable-radiant-2) 3px,
+			var(--disable-radiant-2) 6px
 		);
 	}
 	input:disabled,
 	button:disabled {
 		cursor: not-allowed;
-		filter: brightness(0.5);
+		opacity: 0.5;
 	}
 
 	button {
